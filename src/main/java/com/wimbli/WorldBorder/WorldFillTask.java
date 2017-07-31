@@ -387,7 +387,7 @@ public class WorldFillTask implements Runnable
 		lastReport = Config.Now();
 		double perc = getPercentageCompleted();
 		if (perc > 100) perc = 100;
-		sendMessage(reportNum + " more chunks processed (" + (reportTotal + reportNum) + " total, ~" + Config.coord.format(perc) + "%" + ")");
+		Bukkit.broadcastMessage(reportNum + " more chunks processed (" + (reportTotal + reportNum) + " total, ~" + Config.coord.format(perc) + "%" + ")");
 		reportTotal += reportNum;
 		reportNum = 0;
 
